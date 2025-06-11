@@ -8,7 +8,11 @@ export default function AddTodo() {
 
   const addTodoHandler = (e) => {
     e.preventDefault();
-    if (input.trim() === "") return;
+    if (input.trim() === "") {
+      setInput("");
+      alert("Empty input");
+      return;
+    }
 
     dispatch(addTodo(input));
     setInput("");
@@ -16,10 +20,13 @@ export default function AddTodo() {
 
   //
   return (
-    <form onSubmit={addTodoHandler}>
+    <form
+      onSubmit={addTodoHandler}
+      className="mt-16 w-full max-w-sm p-6 rounded-2xl border border-gray-700 space-y-5"
+    >
       <input
         type="text"
-        className="input"
+        className="input w-full focus:outline-none"
         placeholder="Enter a todo..."
         value={input}
         onChange={(e) => setInput(e.target.value)}
