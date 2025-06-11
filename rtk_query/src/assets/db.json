@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Posts",
+      "body": "Some random posters",
+      "userId": 20
+    },
+    {
+      "id": 2,
+      "title": "Posts",
+      "body": "Some random posters",
+      "userId": 21
+    },
+    {
+      "id": 3,
+      "title": "Posts",
+      "body": "Some random posters",
+      "userId": 23
+    },
+    {
+      "id": 4,
+      "title": "Posts",
+      "body": "Some random posters",
+      "userId": 22
+    },
+    {
+      "id": 5,
+      "title": "Posts",
+      "body": "Some random posters",
+      "userId": 24
+    }
+  ]
+}
