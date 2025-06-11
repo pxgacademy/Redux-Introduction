@@ -7,7 +7,22 @@ export const myAPIs = createApi({
   }),
   endpoints: (builder) => ({
     getPosts: builder.query<Post[], string>({ query: () => "/posts" }),
+
+    newPost: builder.mutation<Post, Post>({
+      query: (post) => ({
+        url: "/posts",
+        method: "POST",
+        body: post,
+      }),
+    }),
   }),
 });
 
-export const { useGetPostsQuery } = myAPIs;
+export const { useGetPostsQuery, useNewPostMutation } = myAPIs;
+
+/*
+tagsTypes: ["Posts"]
+
+providesTags: ["Posts"]
+invalidatesTags: ["Posts"]
+*/
